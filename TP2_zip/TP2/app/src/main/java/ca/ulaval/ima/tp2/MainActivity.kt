@@ -1,18 +1,13 @@
 package ca.ulaval.ima.tp2
 
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -63,11 +58,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val id = item.getItemId()
         if (id == R.id.nav_propos) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, HomeFragment())
+            transaction.replace(R.id.nav_host_fragment, GalleryFragment())
             transaction.commit()
         } else if (id == R.id.nav_internet) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, GalleryFragment())
+            transaction.replace(R.id.nav_host_fragment, HomeFragment())
             transaction.commit()
         } else if (id == R.id.nav_abacus) {
             val transaction = supportFragmentManager.beginTransaction()
