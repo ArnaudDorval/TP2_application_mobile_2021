@@ -12,8 +12,13 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import ca.ulaval.ima.tp2.ui.Propos.ProposFragment
+import ca.ulaval.ima.tp2.ui.Wifi.WifiFragment
+import ca.ulaval.ima.tp2.ui.abacus.AbacusFragment
+import ca.ulaval.ima.tp2.ui.formulaire.FormulaireFragment
 import ca.ulaval.ima.tp2.ui.gallery.GalleryFragment
 import ca.ulaval.ima.tp2.ui.home.HomeFragment
+import ca.ulaval.ima.tp2.ui.profil.ProfilFragment
 import ca.ulaval.ima.tp2.ui.slideshow.SlideshowFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -58,23 +63,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val id = item.getItemId()
         if (id == R.id.nav_propos) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, GalleryFragment())
+            transaction.replace(R.id.nav_host_fragment, ProposFragment())
             transaction.commit()
         } else if (id == R.id.nav_internet) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, HomeFragment())
+            transaction.replace(R.id.nav_host_fragment, WifiFragment())
             transaction.commit()
         } else if (id == R.id.nav_abacus) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, SlideshowFragment())
+            transaction.replace(R.id.nav_host_fragment, AbacusFragment())
             transaction.commit()
         } else if (id == R.id.nav_formulaire) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, SlideshowFragment())
+            transaction.replace(R.id.nav_host_fragment, FormulaireFragment())
             transaction.commit()
         } else if (id == R.id.nav_Profil) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, SlideshowFragment())
+            transaction.replace(R.id.nav_host_fragment, ProfilFragment())
             transaction.commit()
         }
         val drawer = findViewById<View?>(R.id.drawer_layout) as DrawerLayout
