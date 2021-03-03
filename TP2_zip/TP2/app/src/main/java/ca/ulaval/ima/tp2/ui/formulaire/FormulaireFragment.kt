@@ -40,7 +40,7 @@ class FormulaireFragment : Fragment() {
             spinner.adapter = adapter
         }
 
-        val bac = spinner.selectedItem.toString();
+
         val radioGroup = root.findViewById<RadioGroup>(R.id.radioGroupSexe);
         var Sexe = "masculin"
 
@@ -74,7 +74,7 @@ class FormulaireFragment : Fragment() {
             val Prenom: String = editTextPrenom.getText().toString()
             val editTextNom = root.findViewById<EditText>(R.id.editTextTextPersonName)
             val Nom: String = editTextNom.getText().toString()
-
+            val bac = spinner.selectedItem.toString();
             Log.d("Parcelable", "MSG : $Prenom; $Nom; $Naissance; $Sexe; $bac")
 
         })
