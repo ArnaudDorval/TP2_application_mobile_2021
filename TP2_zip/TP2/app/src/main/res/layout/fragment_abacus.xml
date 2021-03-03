@@ -8,26 +8,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.abacus.AbacusFragment">
 
-
-    <SeekBar
-        android:id="@+id/seekBar2"
-        android:layout_width="310dp"
-        android:layout_height="40dp"
-        android:thumb="@drawable/thumbholder"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.431" />
-
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="516dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textViewAA"
@@ -35,7 +24,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="1"
-            android:textColor="#FD1818"/>
+            android:textColor="#FD1818"
+            android:textSize="16dp" />
 
 
         <SeekBar
@@ -43,14 +33,148 @@
             android:layout_width="195dp"
             android:layout_height="40dp"
             android:layout_weight="4"
+            android:min="1"
+            android:max="8"
             android:thumb="@drawable/thumbholder" />
 
         <TextView
             android:id="@+id/textViewAB"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="9"
             android:text="9"
-            android:textColor="#FD1818"/>
+            android:textColor="#FD1818"
+            android:textSize="16dp" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewBA"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="1"
+            android:textColor="#FD1818"
+            android:textSize="16dp" />
+
+
+        <SeekBar
+            android:id="@+id/seekBarB"
+            android:layout_width="195dp"
+            android:layout_height="40dp"
+            android:layout_weight="4"
+            android:min="1"
+            android:max="10"
+            android:thumb="@drawable/thumbholder" />
+
+        <TextView
+            android:id="@+id/textViewBB"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:text="9"
+            android:textColor="#FD1818"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewCA"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="1"
+            android:textColor="#FD1818"
+            android:textSize="16dp" />
+
+
+        <SeekBar
+            android:id="@+id/seekBarC"
+            android:layout_width="195dp"
+            android:layout_height="40dp"
+            android:layout_weight="4"
+            android:min="1"
+            android:max="108"
+            android:thumb="@drawable/thumbholder_gris" />
+
+        <TextView
+            android:id="@+id/textViewCB"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:text="9"
+            android:textColor="#FD1818"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewValueCA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value : "
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        tools:layout_editor_absoluteX="45dp" />
+
+    <TextView
+        android:id="@+id/textViewValueC"
+        android:layout_width="65dp"
+        android:layout_height="19dp"
+        android:text="1"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textViewValueCA"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value : "
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintStart_toStartOf="@+id/textViewValueCA" />
+
+    <TextView
+        android:id="@+id/textViewValueB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintStart_toEndOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value : "
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textViewValueA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/textView9" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,9 +43,6 @@ class WifiFragment : Fragment() {
             }
         })
 
-
-        //sd.setColor(0xff999999);
-        //sd.invalidateSelf();
         return root
     }
 
