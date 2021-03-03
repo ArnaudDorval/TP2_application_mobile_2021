@@ -11,9 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Status Internet"
+        app:layout_constraintBottom_toTopOf="@+id/text_wifi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="169dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_wifi"
@@ -21,9 +22,12 @@
         android:layout_height="wrap_content"
         android:text="Wifi"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_indicateur"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="248dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.834" />
 
     <TextView
         android:id="@+id/text_indicateur"
@@ -31,17 +35,22 @@
         android:layout_height="wrap_content"
         android:text="Indicateur"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewRed"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="400dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865" />
 
     <ImageView
         android:id="@+id/imageViewRed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ellipse_red"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="454dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.853" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
