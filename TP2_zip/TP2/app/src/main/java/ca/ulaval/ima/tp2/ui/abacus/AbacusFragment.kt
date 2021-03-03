@@ -37,6 +37,7 @@ class AbacusFragment : Fragment() {
 
             override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                 //seekerUpdate(textA, textB, textC, seekerA, seekerB, seekerB);
+                // on ajoute +1 et +2 prcq les progress bar peuvent pas avoir de minimum
                 val valueA = seekerA.progress + 1;
                 val valueB = seekerB.progress + 2;
                 val valueC = seekerC.progress;

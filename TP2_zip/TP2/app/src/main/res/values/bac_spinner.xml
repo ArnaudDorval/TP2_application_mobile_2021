@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bac_array">
+        <item>GEL</item>
+        <item>GIF</item>
+        <item>GMC</item>
+        <item>GPH</item>
+        <item>GLO</item>
+        <item>IFT</item>
+        <item>GCI</item>
+        <item>GEX</item>
+    </string-array>
+
+</resources>
