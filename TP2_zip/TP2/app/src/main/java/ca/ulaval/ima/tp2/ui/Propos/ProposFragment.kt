@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import ca.ulaval.ima.tp2.R
 
@@ -32,6 +33,7 @@ class ProposFragment : Fragment() {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_propos, container, false)
+        (activity as AppCompatActivity?)!!.supportActionBar!!.title = "Propos"
         val textView: TextView = root.findViewById(R.id.textViewPropos)
 
         textView.setText(textEnregistre + textEnregistre + textEnregistre + textEnregistre + textEnregistre)

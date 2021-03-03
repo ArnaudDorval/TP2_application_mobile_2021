@@ -1,7 +1,6 @@
 package ca.ulaval.ima.tp2.ui.formulaire
 
 import android.app.DatePickerDialog
-import android.app.DatePickerDialog.OnDateSetListener
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import ca.ulaval.ima.tp2.R
 import java.text.SimpleDateFormat
@@ -26,7 +26,7 @@ class FormulaireFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_formulaire, container, false)
         //val textView: TextView = root.findViewById(R.id.text_gallery)
-
+        (activity as AppCompatActivity?)!!.supportActionBar!!.title = "Formulaire"
         val ctx = requireContext();
         val spinner = root.findViewById<Spinner>(R.id.spinnerBac)
         ArrayAdapter.createFromResource(
@@ -76,15 +76,16 @@ class FormulaireFragment : Fragment() {
             val Nom: String = editTextNom.getText().toString()
 
             Log.d("Parcelable", "MSG : $Prenom; $Nom; $Naissance; $Sexe; $bac")
-            TODO("Faut utiliser la classe profil implémenté pis faire le calisse d'affichage" +
-                    "faut aussi créer le parcelable avec class profil" + 
-            "faut ouvrir la nouvelle activity vers la page profil")
+
         })
 
         return root
 
 
         TODO("Criss de boutton radio sont jaune dans le ui mais après la compilation sont rouge")
+        TODO("Faut utiliser la classe profil implémenté pis faire le calisse d'affichage")
+        TODO("faut aussi créer le parcelable avec class profil")
+        TODO("faut ouvrir la nouvelle activity vers la page profil")
     }
 
 

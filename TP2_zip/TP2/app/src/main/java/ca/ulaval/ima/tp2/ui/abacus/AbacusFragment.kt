@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import ca.ulaval.ima.tp2.R
 
@@ -22,6 +23,8 @@ class AbacusFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_abacus, container, false)
         //val textView: TextView = root.findViewById(R.id.text_wifi)
+
+        (activity as AppCompatActivity?)!!.supportActionBar!!.title = "Abacus"
 
         val seekerC = root.findViewById<SeekBar>(R.id.seekBarC)
         val seekerB= root.findViewById<SeekBar>(R.id.seekBarB)

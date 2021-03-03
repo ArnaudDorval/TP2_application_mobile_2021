@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import ca.ulaval.ima.tp2.R
 
@@ -26,7 +27,7 @@ class WifiFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_wifi, container, false)
         //val textView: TextView = root.findViewById(R.id.text_gallery)
-
+        (activity as AppCompatActivity?)!!.supportActionBar!!.title = "Status Internet"
         val buttonInternet = root.findViewById<Button>(R.id.button_internet_status)
         val ellipse = root.findViewById<ImageView>(R.id.imageViewRed)
 

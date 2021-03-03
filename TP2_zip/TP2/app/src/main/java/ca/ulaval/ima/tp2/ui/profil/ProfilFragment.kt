@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import ca.ulaval.ima.tp2.R
 
@@ -18,7 +19,7 @@ class ProfilFragment : Fragment() {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_profil, container, false)
-
+        (activity as AppCompatActivity?)!!.supportActionBar!!.title = "Profil"
         return root
     }
 }
