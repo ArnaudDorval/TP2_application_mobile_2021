@@ -1,29 +1,31 @@
 package ca.ulaval.ima.tp2
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
 import ca.ulaval.ima.tp2.ui.Propos.ProposFragment
 import ca.ulaval.ima.tp2.ui.Wifi.WifiFragment
 import ca.ulaval.ima.tp2.ui.abacus.AbacusFragment
 import ca.ulaval.ima.tp2.ui.formulaire.FormulaireFragment
-import ca.ulaval.ima.tp2.ui.gallery.GalleryFragment
-import ca.ulaval.ima.tp2.ui.home.HomeFragment
 import ca.ulaval.ima.tp2.ui.profil.ProfilFragment
-import ca.ulaval.ima.tp2.ui.slideshow.SlideshowFragment
+import com.google.android.material.navigation.NavigationView
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+
+    var user = Profil("","","","","")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,7 +56,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             super.onBackPressed()
         }
     }
-
 
 
     override fun onSupportNavigateUp(): Boolean {
@@ -90,6 +91,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
 
         TODO("CHECK toolbar text name ? ")
+    }
+
+    override fun onOptionsItemSelected(item:MenuItem):Boolean{
+        Log.d("Test", "ici")
+        if(item.itemId === android.R.id.home){
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }

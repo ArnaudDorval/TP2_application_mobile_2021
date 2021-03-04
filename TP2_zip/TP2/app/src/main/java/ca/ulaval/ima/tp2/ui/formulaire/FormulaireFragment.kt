@@ -82,7 +82,7 @@ class FormulaireFragment : Fragment() {
             (activity as MainActivity?)?.let{
                 val intent = Intent (it, MainActivity3::class.java)
                 intent.putExtra("pProfil", user);
-                it.startActivity(intent)
+                it.startActivityForResult(intent, AppCompatActivity.RESULT_OK)
             }
 
         })

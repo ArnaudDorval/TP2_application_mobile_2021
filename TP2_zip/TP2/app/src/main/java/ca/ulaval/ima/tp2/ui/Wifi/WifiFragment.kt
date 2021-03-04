@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import ca.ulaval.ima.tp2.R
@@ -34,13 +35,19 @@ class WifiFragment : Fragment() {
 
         buttonInternet.setOnClickListener(View.OnClickListener {
             val t = requireContext().isConnectedToNetwork()
-            if (t == true) {
+            val textwifi = root.findViewById<TextView>(R.id.text_wifi)
+            if (t == 1) {
                 Log.d("Internet", "t : $t")
                 ellipse.setColorFilter(Color.parseColor("#18FD3B"))
-
-            } else {
+                textwifi.text = "Wifi"
+            }else if (t == 2){
+                Log.d("Internet", "t : $t")
+                ellipse.setColorFilter(Color.parseColor("#18FD3B"))
+                textwifi.text = "3G/LTE"
+            } else{
                 Log.d("Internet", "t : $t")
                 ellipse.setColorFilter(Color.parseColor("#FD1818"))
+                textwifi.text = "Aucune connexion"
             }
         })
 
@@ -48,8 +55,19 @@ class WifiFragment : Fragment() {
     }
 
     @Suppress("DEPRECATION")
-    fun Context.isConnectedToNetwork(): Boolean {
+    fun Context.isConnectedToNetwork(): Int {
         val connectivityManager = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?
-        return connectivityManager?.activeNetworkInfo?.isConnectedOrConnecting ?: false
+
+        val pInfo = connectivityManager?.activeNetworkInfo
+        val connected = pInfo != null && pInfo.isAvailable && pInfo.isConnected
+        val wifi = pInfo?.type == ConnectivityManager.TYPE_WIFI
+
+        if (connected && wifi){
+            return 1
+        }else if ( connected && !wifi){
+            return 2
+        } else{
+            return 0
+        }
     }
 }

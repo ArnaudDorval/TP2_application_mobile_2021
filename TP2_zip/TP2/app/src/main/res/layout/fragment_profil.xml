@@ -57,7 +57,6 @@
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="8dp"
-            android:text="TextView"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/TextViewNaisss"
             app:layout_constraintTop_toBottomOf="@+id/TextViewNomB" />
@@ -81,7 +80,6 @@
             android:layout_marginStart="116dp"
             android:layout_marginLeft="116dp"
             android:layout_marginTop="52dp"
-            android:text="TextView"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/TextViewPrenomA"
             app:layout_constraintTop_toTopOf="parent" />
@@ -93,7 +91,6 @@
             android:layout_marginStart="90dp"
             android:layout_marginLeft="90dp"
             android:layout_marginTop="8dp"
-            android:text="TextView"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/TextViewBacA"
             app:layout_constraintTop_toBottomOf="@+id/TextViewGenreB" />
@@ -105,7 +102,6 @@
             android:layout_marginStart="68dp"
             android:layout_marginLeft="68dp"
             android:layout_marginTop="8dp"
-            android:text="TextView"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/TextViewNomA"
             app:layout_constraintTop_toBottomOf="@+id/TextViewPrenomB" />
@@ -142,7 +138,6 @@
             android:layout_marginStart="135dp"
             android:layout_marginLeft="135dp"
             android:layout_marginTop="8dp"
-            android:text="TextView"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/TextViewgenreA"
             app:layout_constraintTop_toBottomOf="@+id/TextViewNaissance" />
