@@ -2,6 +2,7 @@ package ca.ulaval.ima.tp2.ui.formulaire
 
 import android.app.DatePickerDialog
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import ca.ulaval.ima.tp2.R
+import ca.ulaval.ima.tp2.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -76,6 +77,13 @@ class FormulaireFragment : Fragment() {
             val Nom: String = editTextNom.getText().toString()
             val bac = spinner.selectedItem.toString();
             Log.d("Parcelable", "MSG : $Prenom; $Nom; $Naissance; $Sexe; $bac")
+            val user = Profil(Nom, Prenom, Naissance, Sexe, bac);
+
+            (activity as MainActivity?)?.let{
+                val intent = Intent (it, MainActivity3::class.java)
+                intent.putExtra("pProfil", user);
+                it.startActivity(intent)
+            }
 
         })
 
